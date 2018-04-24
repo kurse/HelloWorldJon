@@ -3,6 +3,7 @@ dependencies:
      - sudo apt-get update; sudo apt-get install gcc python-setuptools
      - sudo pip install -U crcmod
    override:
+     - echo y | android update sdk --no-ui --all --filter build-tools-26.0.2,android-26
      - chmod +x gradlew
    post:
      - sudo ./gradlew :app:assembleDebug -PdisablePreDex
