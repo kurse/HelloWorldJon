@@ -3,7 +3,7 @@ dependencies:
      - sudo apt-get update; sudo apt-get install gcc python-setuptools
      - sudo pip install -U crcmod
    post:
-     - chmod +x gradlew
+     - chmod +x ./gradlew
      - sudo ./gradlew :app:assembleDebug -PdisablePreDex
      - sudo ./gradlew :app:assembleDebugTest -PdisablePreDex
      - echo $CLIENT_SECRET | base64 --decode > ${HOME}/client-secret.json
