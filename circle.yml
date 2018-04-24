@@ -5,6 +5,8 @@ dependencies:
    override:
      - echo y | android update sdk --no-ui --all --filter build-tools-26.0.2,android-26
      - chmod +x gradlew
+     - sudo ./gradlew dependencies
+
    post:
      - sudo ./gradlew :app:assembleDebug -PdisablePreDex
      - sudo ./gradlew :app:assembleDebugTest -PdisablePreDex
